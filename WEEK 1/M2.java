@@ -35,13 +35,11 @@ public class M2 {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            String original = sc.nextLine();
+            String typed = sc.nextLine();
 
-        String original = sc.nextLine();
-        String typed = sc.nextLine();
-
-        checkTypingAccuracy(original, typed);
-
-        sc.close();
+            checkTypingAccuracy(original, typed);
+        }
     }
 }
